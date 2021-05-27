@@ -1,15 +1,14 @@
-package main
+package command
 
 import (
 	"os"
 
 	"github.com/mitchellh/cli"
-	"github.com/richardsonlima/cli-skel/command"
 )
 
 var Commands map[string]cli.CommandFactory
 
-func init() {
+func Init() {
 	ui := &cli.BasicUi{Writer: os.Stdout}
 
 	Commands := map[string]cli.CommandFactory{
